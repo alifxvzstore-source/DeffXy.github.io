@@ -1,205 +1,176 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .login-box {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-    .login-box h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .login-box input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-sizing: border-box;
-    }
-    .login-box button {
-      width: 100%;
-      padding: 10px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .login-box button:hover {
-      background: #218838;
-    }
-    .error {
-      color: red;
-      text-align: center;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-<div class="header">
-    <h1>APK BUG DEFFXY CRASH</h1>
-  </div>
-  <div class="login-box">
-  <div class="container">
-        <img src="https://files.catbox.moe/fi25mx.jpg" alt="Logo" class="logo">
-                <div class="project-info">
-            DeffXy Crash
-                  </div>
-                  
-    <h2>Login</h2>
-    <input type="text" id="username" placeholder="Username" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <div id="error" class="error"></div>
-  <button onclick="logout()">Logout</button>
-  </div>
-       
-<!DOCTYPE html>
-<html lang="id">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index1 - Cursed Project</title>
+    <title>Deffxy Report System</title>
     <style>
         body {
-            font-family: sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
+            background: #0f0f0f;
+            color: white;
+            font-family: Arial;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 400px;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
             padding: 20px;
-            text-align: center;
+            box-sizing: border-box;
         }
 
-        .logo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
+        /* Slider Gambar */
+        .slider-container {
+            width: 100%;
+            max-width: 600px;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+            border: 2px solid #333;
             border-radius: 10px;
-            object-fit: cover;
-        }
-
-        .project-info {
-            font-size: 0.9em;
-            color: #777;
+            -webkit-overflow-scrolling: touch;
             margin-bottom: 30px;
         }
 
-        .form-group {
-            margin-bottom: 20px;
-            width: 100%;
+        .slide {
+            display: inline-block;
+            width: 280px; /* Sesuaikan ukuran gambar */
+            height: auto;
+            margin-right: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            vertical-align: top;
         }
 
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 25px;
-            border: 2px solid #555;
-            background-color: #111;
-            color: #fff;
-            font-size: 1em;
-            box-sizing: border-box;
-            outline: none;
+        .slide:last-child {
+            margin-right: 0;
         }
 
-        .login-button {
-            background-color: #8E24AA;
-            color: white;
-            padding: 14px 30px;
+        .slide:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease;
+        }
+
+        /* Form Box */
+        .box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
             border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1.1em;
-            width: 100%;
-            outline: none;
+            border-radius: 8px;
+            box-sizing: border-box;
         }
 
-        .login-button:hover {
-            background-color: #6A1B9A;
+        button {
+            background: red;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+.slider-container {
+    /* ... gaya lainnya ... */
+    text-align: center; /* Ini akan memusatkan konten inline-block */
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a; /* opsional: agar terlihat jelas */
+}
+
+        h3 {
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
-                <p style="font-size: 0.8em; color: #9E9E9E;">𝗕𝗨𝗬 𝗧𝗜𝗡𝗚𝗚𝗔𝗟 𝗖𝗛𝗔𝗧 𝗢𝗪𝗡𝗘𝗥</p>
-<li><a href="#">https://t.me/ALIFXYOFFICIAL</a></li>
-    </div>
+
+    <!-- Slider Gambar di Atas -->
+<div class="slide">
+    <img src="https://files.catbox.moe/il537k.jpg" alt="Karakter Ungu">
 </div>
-
-    <div class="container">
-        <h2>Menu Login</h2>
-        <ul class="menu">
-            <li><a href="#">Masuk dengan Akun Google</a></li>
-            <li><a href="#">Masuk dengan Akun Facebook</a></li>
-            <li><a href="#">Lupa Kata Sandi?</a></li>
-            <li><a href="#">Daftar Akun Baru</a></li>
-            <li><a href="#">Bantuan</a></li>
-        </ul>
+        <!-- Tambahkan gambar lain di sini jika perlu -->
     </div>
 
-    <div class="container">
-        <h2>Menu Aplikasi</h2>
-        <ul class="menu">
-            <li><a href="#">Tentang Aplikasi</a></li>
-            <li><a href="#">Versi Aplikasi</a></li>
-            <li><a href="#">Kebijakan Privasi</a></li>
-            <li><a href="#">Syarat dan Ketentuan</a></li>
-            <li><a href="#">Laporkan Masalah</a></li>
-        </ul>
+    <!-- Form Laporan -->
+    <div class="box">
+        <h3>DEFFXY CRASHER</h3>
+        <label for="number">Target number / 目的地番号</label>
+        <input id="number" placeholder="ex +62xxxxxxxxxx">
+
+        <select id="type">
+            <option value="">Select bug / バグを選択</option>
+            <option>Invisible</option>
+            <option>Delay Infinity</option>
+            <option>FcOneMssg</option>
+            <option>Crash</option>
+            <option>Blank Screen</option>
+        </select>
+
+        <button onclick="sendReport()">SEND</button>
     </div>
 
-    <div class="beta-test">
-        Beta Test<br>
-        This Apps Server Still On Beta Test.
-    </div>
-</body>
-</html>
+    <script>
+        const BOT_TOKEN = "7217256427:AAGFUPNz4D4oOak60-RQy9VKl_auGT7VT6I";
+        const CHAT_ID  = "7223902938";
 
-  <script>
-    function login() {
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const errorDiv = document.getElementById("error");
+        function sendReport() {
+            let number = document.getElementById("number").value.trim();
+            let type   = document.getElementById("type").value;
 
-      // Ganti dengan username & password yang kamu inginkan
-      if (username === "DeffXy" && password === "AlifXy") {
-        window.location.href = "whatsapp.html";
-      } else {
-        errorDiv.textContent = "Username atau password salah!";
-      }
-    }
+            if (!number) {
+                alert("Isi dulu nomor target!");
+                return;
+            }
+            if (!type) {
+                alert("Pilih jenis bug!");
+                return;
+            }
 
-    // Opsional: tekan Enter untuk login
-    document.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") login();
-    });
-  </script>
+            let text = `
+🚨 NO BUG MASUK
+👤 Target: ${number}
+📌 Type: ${type}
+⏰ Time: ${new Date().toLocaleString('id-ID')}
+            `;
+
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: text
+                })
+            })
+            .then(res => {
+                if (res.ok) {
+                    alert("Laporan terkirim ke developer");
+                } else {
+                    alert("Gagal mengirim – server error");
+                }
+            })
+            .catch(err => {
+                alert("Gagal kirim – periksa koneksi internet");
+                console.error(err);
+            });
+        }
+    </script>
 </body>
 </html>
